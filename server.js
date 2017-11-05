@@ -4,19 +4,16 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 3000;
+
 // parse application/x-www-form-urlencoded 
-app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+// Add routes to app
+const apiRoutes = require('./app/routing/apiRoutes')(app);
 
-app.get('/', (req, res) => {
-	fs.readFile(`./app/public/home.html`, function(err, htmlData) {
-		console.log();
-		res.send(htmlData.toString());
-	})
-});
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
 	console.log('Example app listening on port 3000!')
 });
