@@ -7,7 +7,7 @@ function apiRoutes(app) {
 	});
 
 	app.post('/api/friends', (req, res) => {
-
+		res.json(friends[1]);
 	});
 }
 
