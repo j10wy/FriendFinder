@@ -1,18 +1,13 @@
 const fs = require('fs');
+const friends = require('../data/friends');
 
 function apiRoutes(app) {
-	app.get('/', (req, res) => {
-		fs.readFile(`./app/public/home.html`, function (err, htmlData) {
-			console.log();
-			res.send(htmlData.toString());
-		})
+	app.get('/api/friends', (req, res) => {
+		res.json(friends);
 	});
 
-	app.get('/survey', (req, res) => {
-		fs.readFile(`./app/public/survey.html`, function (err, htmlData) {
-			console.log();
-			res.send(htmlData.toString());
-		})
+	app.post('/api/friends', (req, res) => {
+
 	});
 }
 

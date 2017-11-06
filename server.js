@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
 app.use(bodyParser.json());
-// Add routes to app
+// Add HTML & API routes to app
+const htmlRoutes = require('./app/routing/htmlRoutes')(app);
 const apiRoutes = require('./app/routing/apiRoutes')(app);
-
 
 app.listen(PORT, () => {
 	console.log('Example app listening on port 3000!')

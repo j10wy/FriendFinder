@@ -13,3 +13,5 @@
 [How to Deploy a Node.js App to Heroku](https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku)
 
 [Heroku Account Verification Information](https://devcenter.heroku.com/articles/account-verification)
+
+[Chosen jQuery Plugin](https://github.com/harvesthq/chosen)
