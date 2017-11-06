@@ -1,17 +1,17 @@
-const fs = require('fs');
+const router = require('express').Router();
 const friends = require('../data/friends');
 
-function apiRoutes(app) {
-	app.get('/api/friends', (req, res) => {
-		res.json(friends);
-	});
 
-	app.post('/api/friends', (req, res) => {
-		res.json(friends[1]);
-		//console.log(req.body['scores[]'])
-		parseFriends(req.body)
-	});
-}
+router.get('/api/friends', (req, res) => {
+	res.json(friends);
+});
+
+router.post('/api/friends', (req, res) => {
+	res.json(friends[1]);
+	//console.log(req.body['scores[]'])
+	parseFriends(req.body)
+});
+
 
 function parseFriends(userObj) {
 	const numFriends = friends.length;
@@ -36,4 +36,4 @@ function parseFriends(userObj) {
 	console.log(friendCompare);
 }
 
-module.exports = apiRoutes;
+module.exports = router;
