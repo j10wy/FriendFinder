@@ -11,11 +11,12 @@ router.get('/api/friends', (req, res) => {
 // Create a POST route to uppdate and return data from the friends API
 router.post('/api/friends', (req, res) => {
 	// Call the parseFriends function below
-	// Pass the request body (user submission) to the function
-	parseFriends(req.body);
+	// Store the returned value of parseFriends by padding the request body (user submission) as an argument
+	;
 
+	const bestFriend = parseFriends(req.body);
 	// Return the matched user info to be displayed in the modal window.
-	res.json(friends[1]);
+	res.json(bestFriend);
 });
 
 // This function handles comparing the user's form input to users stored in the friends API. It returns the user that is the closest match.
@@ -44,10 +45,18 @@ function parseFriends(userObj) {
 
 		});
 
-		// @todo Figure out how to store the comparison results here
-		friendCompare[friendId] = difference;
+		// Push the ID (array item number) of the friends from the database along with the difference of the score values.
+		friendCompare.push([friendId, difference]);
 	}
-	console.log(friendCompare);
+
+	// Sort the friendCompare array by difference in score from the user
+	let sortedFriendsCompare = friendCompare.sort(function (friendA, friendB) {
+		// subtract A from B to sort the friends in ascending order by smallest difference.
+		return  friendA[1] - friendB[1];
+	});
+
+	// Return the friend in the zero index. This is the friend with the closest score to the current user.
+	return friends[sortedFriendsCompare[0][0]];
 }
 
 // Export the API Routes

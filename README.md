@@ -15,3 +15,5 @@
 [Heroku Account Verification Information](https://devcenter.heroku.com/articles/account-verification)
 
 [Chosen jQuery Plugin](https://github.com/harvesthq/chosen)
+
+[MDN: Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
