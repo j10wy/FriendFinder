@@ -55,7 +55,7 @@ function parseFriends(userObj) {
 		return  friendA[1] - friendB[1];
 	});
 
-	// Return the friend in the zero index. This is the friend with the closest score to the current user.
+	// Return the friend object in the zero index of the sorted array. This is the friend with the closest score to the current user.
 	return friends[sortedFriendsCompare[0][0]];
 }
 

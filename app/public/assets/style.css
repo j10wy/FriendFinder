@@ -1,0 +1,42 @@
+body {
+	background-color: #b90000;
+}
+
+h2 {
+	color: white;
+}
+
+h3 {
+	color: #ffcd3e;
+}
+
+h4 {
+	color: #ffe391;
+}
+
+button h4 {
+	color: white;
+}
+
+a,
+a:focus,
+a:hover {
+	color: white;
+}
+
+div.jumbotron {
+	background-color: #ffcd3e;
+}
+
+div.jumbotron h1 {
+	color: #e92020;
+}
+
+button.btn-primary {
+	background-color: #00b078;
+	border: none;
+}
+
+button.btn-primary:hover {
+	background-color: #00895d;
+}
