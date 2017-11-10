@@ -15,8 +15,6 @@ app.use(express.static('app/public/assets'));
 // Call Heroku's environment variable, if false use port 3000
 const PORT = process.env.PORT || 3000;
 
-
-
 // Require HTML & API middleware.
 const htmlRoutes = require('./app/routing/htmlRoutes');
 const apiRoutes = require('./app/routing/apiRoutes');

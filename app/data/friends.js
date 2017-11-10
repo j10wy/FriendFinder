@@ -1,15 +1,26 @@
 const friends = [{
-	"name": "Ahmed",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-	"scores": ["1", "2", "2", "3", "5", "1", "2", "5", "4", "5"]
-}, {
-	"name": "Cersei Lannister",
-	"photo": "http://www.konbini.com/wp-content/blogs.dir/9/files/2017/09/cersei-feat1-480x279.jpg",
-	"scores": ["5", "5", "1", "1", "1", "1", "1", "1", "1", "2"]
-}, {
-	"name": "Jeremiah Scanlon",
-	"photo": "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
-	"scores": ["1", "1", "2", "5", "5", "4", "4", "2", "5", "3"]
-}];
+		"name": "Homer Simpson",
+		"photo": "https://media.giphy.com/media/BPNSQQFODgZxu/giphy.gif",
+		"scores": ["4", "4", "5", "4", "5", "5", "3", "4", "4", "4"]
+	}, {
+		"name": "Gwen Stefani",
+		"photo": "https://media.giphy.com/media/3VnBzLUHlbUt2/giphy.gif",
+		"scores": ["4", "3", "3", "4", "4", "2", "4", "5", "3", "2"]
+	}, {
+		"name": "Rudy Huxtable",
+		"photo": "https://media.giphy.com/media/BPofSmBGnwJIQ/giphy.gif",
+		"scores": ["3", "3", "3", "3", "3", "3", "3", "3", "3", "3"]
+	},
+	{
+		"name": "Michaelangelo",
+		"photo": "https://media.giphy.com/media/l46Ch79rH2LK5AkHm/giphy.gif",
+		"scores": ["5", "5", "5", "5", "5", "5", "5", "5", "5", "5"]
+	},
+	{
+		"name": "Daria",
+		"photo": "https://media.giphy.com/media/1D40TmuYNLk4w/giphy.gif",
+		"scores": ["2", "2", "3", "3", "3", "1", "1", "3", "4", "3"]
+	}
+];
 
 module.exports = friends;

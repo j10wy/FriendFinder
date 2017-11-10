@@ -38,7 +38,7 @@ function parseFriends(userObj) {
 
 			// Store a former user's score and the current user's score
 			let userScore = item;
-			let friendScore = friends[friendId].scores[friendId]
+			let friendScore = friends[friendId].scores[index]
 
 			// DO MATH!
 			difference += Math.abs(userScore - friendScore);
@@ -46,6 +46,7 @@ function parseFriends(userObj) {
 		});
 
 		// Push the ID (array item number) of the friends from the database along with the difference of the score values.
+		console.log(friendId, friends[friendId].name, difference)
 		friendCompare.push([friendId, difference]);
 	}
 
