@@ -26,3 +26,4 @@ node_modules/
 
 # UCB Files
 # INSTRUCTIONS.md
+.DS_Store
